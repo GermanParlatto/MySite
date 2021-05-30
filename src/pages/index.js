@@ -1,29 +1,29 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import Layout from "../components/Layout"
+import Home from "../components/sections/Home"
+import About from "../components/sections/About"
+import Experience from "../components/sections/Experience"
+import Contact from "../components/sections/Contact"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+`
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+const IndexPage = ({ location }) => (
+  <Layout location={location}>
+    <StyledMainContainer>
+      <Home />
+      <About />
+      <Experience />
+      <Contact />
+    </StyledMainContainer>
   </Layout>
 )
+
+IndexPage.propTypes = {
+  location: PropTypes.object.isRequired,
+}
 
 export default IndexPage
