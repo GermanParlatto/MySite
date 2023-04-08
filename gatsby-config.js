@@ -61,7 +61,7 @@ const gatsby_plugin_sitemap = {
 module.exports = {
   siteMetadata: {
     title: `German Parlatto`,
-    description: `German Parlatto is a Front-End Developer with over 5 years experience.`,
+    description: `German Parlatto is a Front-End Developer with over 7 years experience.`,
     siteUrl: "https://www.germanparlatto.com",
     image: "/home.png",
   },
