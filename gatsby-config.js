@@ -1,3 +1,11 @@
+const gatsby_plugin_google_tagmanager = {
+  resolve: "gatsby-plugin-google-tagmanager",
+  options: {
+    id: "GTM-T3W6WQB",
+    includeInDevelopment: false,
+  },
+}
+
 const gatsby_plugin_google_gtag = {
   resolve: `gatsby-plugin-google-gtag`,
   options: {
@@ -112,5 +120,6 @@ module.exports = {
     gatsby_plugin_google_gtag,
     `gatsby-plugin-robots-txt`,
     gatsby_plugin_sitemap,
+    gatsby_plugin_google_tagmanager,
   ],
 }
